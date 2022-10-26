@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gugor Verification</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body>
+    <div class="container prose mx-auto sm:my-20 p-8">
+      <img src="./botAvatar.webp"" alt="Gugor Avatar" />
+      <h1>Player Verification</h1>
+      <p>
+        Please fill out the following informations in order to play on our
+        server. To get verified, you need to be a member of our Discord server.
+        If you are not, please
+        <a href="https://discord.gg/GgXZy9FU">join our Discord server</a> first.
+      </p>
+
+      <form id="form" class="grid grid-cols-1 max-w-md gap-6">
+        <label class="block" for="discordUsername">
+          <span class="text-gray-700">Discord Username</span>
+          <input
+            class="block w-full"
+            type="text"
+            id="discordUsername"
+            name="discordUsername"
+            placeholder="e.g. Gugor#0001"
+            required
+          />
+        </label>
+        <label class="block" for="minecraftUsername">
+          <span class="text-gray-700">Minecraft Username</span>
+          <input
+            class="block w-full"
+            type="text"
+            id="minecraftUsername"
+            name="minecraftUsername"
+            placeholder="e.g. Gugor"
+            required
+          />
+        </label>
+        <label class="block" for="password">
+          <span class="text-gray-700">Password</span>
+          <input
+            class="block w-full"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="e.g. 123456"
+            required
+          />
+        </label>
+
+        <button class="w-fit bg-blue-500 text-white px-5 py-2" type="submit">
+          Verificate me
+        </button>
+      </form>
+
+      <span id="loadingMessage" class="italic text-gray-700 hidden">
+        We are verifying your informations. Please wait...
+      </span>
+
+      <span id="errorMessage" class="italic text-red-700 hidden"
+        >Oh snap, an error occured! Please check your entries or try later
+        again.</span
+      >
+
+      <span id="successMessage" class="italic text-green-700 hidden">
+        You have been verified successfully! You can now join our server and
+        close this window.
+      </span>
+
+      <script src="./app.js"></script>
+    </div>
+  </body>
+</html>
