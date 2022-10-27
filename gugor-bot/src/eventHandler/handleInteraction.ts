@@ -1,7 +1,7 @@
 import { Interaction } from "discord.js";
 import Command from "@/utils/Command";
 import ErrorHandler from "@/errorHandler/ErrorHandler";
-import logCLI from "shared/logCLI";
+import logCLI from "@shared/logCLI";
 
 /**
  * Assigns commands to interactions and executes them.
@@ -19,8 +19,7 @@ async function handleInteraction(
   // Find command
   const command = commands.find((c) => c.name === commandName)!;
   const subcommand = command.subcommands.find(
-    //@ts-ignore
-    (c) => c.name === interaction.options.getSubcommand
+    (c) => c.name === interaction.options.getSubcommand()
   );
 
   // execute command

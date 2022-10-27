@@ -3,7 +3,7 @@ import axios from "axios";
 import ErrorHandler from "@/errorHandler/ErrorHandler";
 import convertWaypointObject from "@/utils/convertWaypointObject";
 import Subcommand from "@/utils/Subcommand";
-import route from "shared/route";
+import route from "@shared/route";
 
 class GetWaypoint extends Subcommand {
   constructor() {

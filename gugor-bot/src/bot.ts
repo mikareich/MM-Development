@@ -1,7 +1,7 @@
 import botClient, { loginClient } from "@/utils/client";
 import Command from "@/utils/Command";
 import registerCommands from "@/utils/registerCommands";
-import logCLI from "shared/logCLI";
+import logCLI from "@shared/logCLI";
 import handleInteraction from "@/eventHandler/handleInteraction";
 
 async function startBot(commands: Command[]) {

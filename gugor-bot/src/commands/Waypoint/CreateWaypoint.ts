@@ -3,7 +3,7 @@ import axios, { AxiosError } from "axios";
 import ErrorHandler from "@/errorHandler/ErrorHandler";
 import Subcommand from "@/utils/Subcommand";
 import { CommandOption, WorldDimension } from "@/interfaces";
-import route from "shared/route";
+import route from "@shared/route";
 
 class CreateWaypoint extends Subcommand {
   constructor() {

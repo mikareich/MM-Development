@@ -3,8 +3,8 @@ import axios from "axios";
 import ErrorHandler from "../../errorHandler/ErrorHandler";
 import Subcommand from "../../utils/Subcommand";
 import { CommandOption, Waypoint } from "../../interfaces";
-import route from "shared/route";
-import logCLI from "shared/logCLI";
+import route from "@shared/route";
+import logCLI from "@shared/logCLI";
 
 class DeleteWaypoint extends Subcommand {
   constructor() {

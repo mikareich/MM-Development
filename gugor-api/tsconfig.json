@@ -13,7 +13,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "shared/*": ["../gugor-shared/src/*"]
+      "@shared/*": ["../gugor-shared/src/*"],
+      "@api/*": ["../gugor-api/src/*"],
+      "@bot/*": ["../gugor-bot/src/*"]
     }
   }
 }

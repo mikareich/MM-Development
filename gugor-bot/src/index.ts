@@ -1,4 +1,4 @@
-import startBot from "./bot"
-import commands from "./commands"
+import startBot from "./bot";
+import commands from "./commands";
 
-startBot(commands)
+startBot(commands);

@@ -1,6 +1,6 @@
 import { Client, Intents } from "discord.js";
-import logCLI from "shared/logCLI";
-import envVars from "shared/envVariables";
+import logCLI from "@shared/logCLI";
+import envVars from "@shared/envVariables";
 
 /** Client object for the discord bot */
 const botClient = new Client({
