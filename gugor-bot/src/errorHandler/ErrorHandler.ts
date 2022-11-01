@@ -1,6 +1,6 @@
 import { CommandInteraction } from "discord.js";
 import { Error } from "@/interfaces";
-import logCLI from "@shared/logCLI";
+import logCLI from "@/utils/logCLI";
 
 class ErrorHandler {
   public static Errors: Error[] = [

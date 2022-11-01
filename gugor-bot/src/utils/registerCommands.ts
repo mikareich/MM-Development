@@ -1,7 +1,7 @@
 import { REST } from "@discordjs/rest";
 import { Routes } from "discord-api-types/v9";
-import logCLI from "@shared/logCLI";
-import envVariables from "@shared/envVariables";
+import logCLI from "@/utils/logCLI";
+import envVariables from "@/utils/envVariables";
 import Command from "./Command";
 
 /**

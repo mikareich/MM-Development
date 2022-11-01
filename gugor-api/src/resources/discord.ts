@@ -1,6 +1,6 @@
-import { Router, Request, Response } from "express";
+/* import { Router, Request, Response } from "express";
 import client, { loginClient } from "@bot/utils/client";
-import envVariables from "@shared/envVariables";
+import envVariables from "@/utils/envVariables";
 
 const router = Router();
 
@@ -28,3 +28,4 @@ router.get("/:username", async (req: Request, res: Response) => {
 });
 
 export default router;
+ */

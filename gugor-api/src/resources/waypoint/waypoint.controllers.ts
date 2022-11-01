@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { IDQuery, Waypoint as IWaypoint, WorldDimension } from "@/interfaces";
-import logCLI from "@shared/logCLI";
+import logCLI from "@/utils/logCLI";
 import Waypoint from "./waypoint.model";
 
 interface WaypointQuery {

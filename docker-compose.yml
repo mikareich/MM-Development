@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  api:
+    build: ./gugor-api
+    environment:
+      - MONGO_URI=mongodb+srv://admin:EQO4jHdPxh9FaUwo@cluster0.g9gdw4e.mongodb.net/
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    networks:
+      - gugor-network
+
+  bot:
+    build: ./gugor-bot
+    environment:
+      - API_URI=http://api:3000/
+      - DC_TOKEN=OTg1MTU3NTExNTc1MzcxODU2.GlSWhm.u8mVv8OcM_CKJhgQjQeRNe2lhNtR_DD-h2oi6I
+      - DC_FLUFFY_TUFFYS_GUILD_ID=925777049673662484
+      - DC_CLIENT_ID=985157511575371856
+    networks:
+      - gugor-network
+    links:
+      - api
+
+networks:
+  gugor-network:
+    driver: bridge

@@ -3,7 +3,7 @@ import axios from "axios";
 import ErrorHandler from "@/errorHandler/ErrorHandler";
 import convertWaypointObject from "@/utils/convertWaypointObject";
 import Subcommand from "@/utils/Subcommand";
-import route from "@shared/route";
+import envVariables from "@/utils/envVariables";
 
 class GetWaypoint extends Subcommand {
   constructor() {
@@ -15,7 +15,7 @@ class GetWaypoint extends Subcommand {
 
     try {
       const waypointList = await axios
-        .get(route("/waypoint"))
+        .get(envVariables.API_URI)
         .then((res) => res.data)
         .then((waypoints) => waypoints.map(convertWaypointObject));
 

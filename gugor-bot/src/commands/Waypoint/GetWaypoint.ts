@@ -4,7 +4,7 @@ import ErrorHandler from "@/errorHandler/ErrorHandler";
 import convertWaypointObject from "@/utils/convertWaypointObject";
 import Subcommand from "@/utils/Subcommand";
 import { CommandOption } from "@/interfaces";
-import route from "@shared/route";
+import envVariables from "@/utils/envVariables";
 
 class GetWaypoint extends Subcommand {
   constructor() {
@@ -25,20 +25,9 @@ class GetWaypoint extends Subcommand {
 
     const name = interaction.options.getString("name")!;
 
-    const user = await axios
-      .get(route("/player"), {
-        data: {
-          discordId: interaction.user.id,
-        },
-        headers: { Authorization: "***" },
-      })
-      .then((res) => res.data[0]);
-
-    console.log(user);
-
     try {
       const waypoint = await axios
-        .get(route(`/waypoint`), {
+        .get(envVariables.API_URI, {
           data: {
             name,
           },

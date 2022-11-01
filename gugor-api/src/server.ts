@@ -3,8 +3,8 @@ import cors from "cors";
 import connectDB from "@/utils/connectDB";
 import waypointRouter from "@/resources/waypoint/waypoint.router";
 import playerRouter from "@/resources/player/player.router";
-import discordRouter from "@/resources/discord";
-import logCLI from "@shared/logCLI";
+// import discordRouter from "@/resources/discord";
+import logCLI from "@/utils/logCLI";
 import path from "path";
 
 const PORT = process.env.PORT || 3000;
@@ -38,7 +38,7 @@ app.get("/", (req, res) => res.send("API is up and running"));
 
 app.use("/api/waypoint", waypointRouter);
 app.use("/api/player", playerRouter);
-app.use("/api/discord", discordRouter);
+// app.use("/api/discord", discordRouter);
 
 app.use("/verify", express.static(path.join(__dirname, "verification-gui")));
 

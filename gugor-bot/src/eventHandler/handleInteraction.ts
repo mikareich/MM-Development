@@ -1,7 +1,7 @@
 import { Interaction } from "discord.js";
 import Command from "@/utils/Command";
 import ErrorHandler from "@/errorHandler/ErrorHandler";
-import logCLI from "@shared/logCLI";
+import logCLI from "@/utils/logCLI";
 
 /**
  * Assigns commands to interactions and executes them.

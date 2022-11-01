@@ -3,8 +3,8 @@ import axios from "axios";
 import ErrorHandler from "../../errorHandler/ErrorHandler";
 import Subcommand from "../../utils/Subcommand";
 import { CommandOption, Waypoint } from "../../interfaces";
-import route from "@shared/route";
-import logCLI from "@shared/logCLI";
+import envVariables from "@/utils/envVariables";
+import logCLI from "@/utils/logCLI";
 
 class DeleteWaypoint extends Subcommand {
   constructor() {
@@ -27,7 +27,7 @@ class DeleteWaypoint extends Subcommand {
 
     try {
       const waypoint = (await axios
-        .get(route("/waypoint"), {
+        .get(envVariables.API_URI, {
           data: {
             name,
           },
@@ -40,7 +40,7 @@ class DeleteWaypoint extends Subcommand {
         return;
       }
 
-      await axios.delete(route(`/waypoint`), {
+      await axios.delete(envVariables.API_URI, {
         data: {
           // eslint-disable-next-line no-underscore-dangle
           id: waypoint._id,

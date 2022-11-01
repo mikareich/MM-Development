@@ -3,7 +3,7 @@ import axios, { AxiosError } from "axios";
 import ErrorHandler from "@/errorHandler/ErrorHandler";
 import Subcommand from "@/utils/Subcommand";
 import { CommandOption, WorldDimension } from "@/interfaces";
-import route from "@shared/route";
+import env from "@/utils/envVariables";
 
 class CreateWaypoint extends Subcommand {
   constructor() {
@@ -77,7 +77,7 @@ class CreateWaypoint extends Subcommand {
     };
 
     try {
-      await axios.post(route("/waypoint"), waypoint);
+      await axios.post(env.API_URI, waypoint);
 
       interaction.editReply(`Waypoint ${name} created.`);
     } catch (err: any) {
